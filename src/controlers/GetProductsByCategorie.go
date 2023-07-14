@@ -34,7 +34,7 @@ func GetProductByCategory(c *gin.Context) {
 
 	var data interface{}
 	if err := json.Unmarshal(body, &data); err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		c.JSON(http.StatusInternalServerError, gin.H{"errors": err.Error()})
 		return
 	}
 
